@@ -7,6 +7,11 @@ Code documentation tool: *doxygen* <br />
 
 ## Instructions
 1) Git clone this repository into the base directory, usually /home/&lt;user&gt;/ <br />
+2) Create a folder called "bundle" inside this repo and git clone the vim plugin manager, Vundle into it: <br />
+```
+mkdir ~/.vim/bundle
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
 2) Create a symlink for the .vimrc file in your base directory: *ln -s ~/.vim/.vimrc ~/* <br />
 3) Open VIM and type the following command to install the vim plugins *:PluginInstall* <br />
 
