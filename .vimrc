@@ -6,8 +6,11 @@ source ~/.vim/.vimrc.plug "Plugin calls are stored in this file
 source ~/.vim/.vimrc.plug.customsettings "Custom settings for plugins are stored in this file
 endif
 
-"=====Custom color scheme setting
+"=====Enable syntax highlighting including doxygen for C families
 syntax enable
+:let g:load_doxygen_syntax=1
+
+"=====Custom color scheme setting
 set background=dark
 "let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
