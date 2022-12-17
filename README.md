@@ -1,8 +1,9 @@
 # VIM Ubuntu Setup
 ## Requirements
-Install with sudo apt-get install:
-Python linters, *black*, *flake8*, and fixer *isort* <br />
-Code documentation tool,*doxygen* <br />
+Python linters: *black*, *flake8*<br />
+Python fixer: *isort* <br />
+Code documentation tool: *doxygen* <br />
+<sub>All of these can be installed with *sudo apt-get install &lt;program_name&gt;* </sub>
 
 ## Instructions
 1) Git clone this repository into the base directory, usually /home/&lt;user&gt;/ <br />
