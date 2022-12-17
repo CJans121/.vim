@@ -34,6 +34,9 @@ Plugin 'dense-analysis/ale'
 "Undo to multiple world lines
 Plugin 'mbbill/undotree'
 
+"Doxygen comment generator
+Plugin 'vim-scripts/DoxygenToolkit.vim'
+
 "Fuzzy finder
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
