@@ -1,0 +1,8 @@
+black
+flake8
+isort
+cppcheck
+clang-format
+xmllint
+doxygen
+fzf
