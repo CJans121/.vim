@@ -11,18 +11,24 @@ Fuzzy file searcher: *fzf* <br />
 
 ## Instructions
 1) Git clone this repository into the base directory, usually `~/`<br />
-2) Create a folder called "bundle" inside this repo and git clone the vim plugin manager, Vundle into it: <br />
+2) If you haven't installed the above requirements yet, install all of them at once with: <br />
+
+```
+cat ~/.vim/supplements/requirements.list | xargs sudo apt-get -y install
+
+```
+3) Create a folder called "bundle" inside this repo and git clone the vim plugin manager, Vundle into it: <br />
 
 ```
 mkdir ~/.vim/bundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
-3) Create a symlink for the .vimrc file in your base directory:<br />
+4) Create a symlink for the .vimrc file in your base directory:<br />
 
 ```
  ln -s ~/.vim/.vimrc ~/
 ```
-4) Open VIM and type the following command to install the vim plugins `:PluginInstall` <br />
+5) Open VIM and type the following command to install the vim plugins `:PluginInstall` <br />
 
 ## Optional
 1) If you want C++ and python autocompletion for ROS and ROS2, compile YCM by: <br />
