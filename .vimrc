@@ -23,8 +23,8 @@ inoremap "c ""<Left>
 inoremap 'c ''<Left>
 inoremap <c <><Left>
 
-"=====Setting line numbers on by default
-set number
+"=====Setting relative line numbers on by default
+:set nu
 
 "=====Automatically wrap text that extends beyond the screen length
 set wrap
@@ -61,8 +61,14 @@ hi search ctermfg=Grey
 "remap so pressing ? clears previous highlights and enters search mode
 nnoremap ? :nohlsearch<CR> <bar> ?
 
+" Ignore capital letters during search.
+set ignorecase
+
+"No wrapping of lines
+set nowrap
+
 "====To show search statistics
 set shortmess-=S
 
-"====Show relative numbers with \rn
-:set rnu
+"====Show absolute numbers with \n
+nnoremap <silent> \r :set rnu!<CR>
