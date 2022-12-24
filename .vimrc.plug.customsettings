@@ -16,6 +16,10 @@ hi YcmWarningSection ctermbg=0 cterm=underline
 " YCM Shortcut
 " Go to definition and open it in a new tab
 map gd :tab YcmCompleter GoTo <CR>
+"Toggle function info with \i
+nmap <silent> <leader>i <plug>(YCMHover)
+let g:ycm_auto_hover = ""
+let g:ycm_error_symbol = '✗'
 "" turn on completion in comments
 "Another way to map is:
 "comm! gt :YcmCompleter GoTo<CR>
@@ -38,19 +42,22 @@ map gd :tab YcmCompleter GoTo <CR>
 "Error and warning signs
 let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '❗'
+" let g:airline#extensions#ale#enabled = 1
+
+"To run only specified linters and fixers
+let g:ale_linters_explicit = 1
 
 "Linters
 let g:ale_linters = {'python': ['flake8'],
-			\'cpp': ['clang'],
+			 \'cpp': ['cppcheck'],
 			\'xml': ['xmllint']}
+
 
 "Fixers
 let g:ale_fixers = {'*': ['remove_trailing_lines','trim_whitespace'],
 			\'python':['black','isort'],
-			\'cpp':['clangtidy']}
+			\'cpp':['clang-format']}
 
-"To run only specified linters and fixers
-let g:ale_linters_explicit = 1
 "Fix on save
 let g:ale_fix_on_save = 1
 
