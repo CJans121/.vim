@@ -104,3 +104,6 @@ let g:airline_section_z = airline#section#create(['%3p%%: ', 'linenr', '/%L', ' 
 
 "====Undotree
 map <Leader>u :UndotreeToggle <CR>
+
+"To disable default gitgutter mappings
+let g:gitgutter_map_keys = 0
