@@ -72,3 +72,6 @@ set shortmess-=S
 
 "====Show absolute numbers with \n
 nnoremap <silent> \r :set rnu!<CR>
+
+"====Increase update time for quicker updates in vim git-gutter
+set updatetime=250
