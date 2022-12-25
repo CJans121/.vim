@@ -21,6 +21,12 @@ Plugin 'ycm-core/YouCompleteMe'
 "Fugitive plugin as Vim Github wrapper
 Plugin 'tpope/vim-fugitive'
 
+"To display git diff in the gutter
+Plugin 'airblade/vim-gitgutter'
+
+"To browse repo files in github with/without line reference
+Plugin 'tpope/vim-rhubarb'
+
 "To comment stuff out
 Plugin 'tpope/vim-commentary'
 
