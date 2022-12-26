@@ -1,43 +1,44 @@
-"*****Using Vundle to manage plugins, Vundle stores plugins inside
-"~/.vim/bundle by default
-filetype off " Vundle requires this before calling plugins. Filetype is set back on below after plugin calls
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
+"#####Author: Crasun Jans#####"
+"Plugins for .vimrc, managed by Vundle
 
 
+"=====Vundle requirements LHS
+filetype off "Vundle requires this before calling plugins. Filetype is set back on below after plugin calls
 
-"=====Begin plugin call
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+set rtp+=~/.vim/bundle/Vundle.vim "Set the runtime path to include Vundle and initialize
 
-" let Vundle manage Vundle, required
+call vundle#begin() "Begin plugin call, can alternate plugin install path as vundle#begin('~/some/path/here')
+"#
+
+
+"=====List of plugins
+
+"Plugin manager
 Plugin 'VundleVim/Vundle.vim'
 
-"YouCompleteMe plugin for ROS-related C++ and Python autocompletion
+"ROS-related C++ and Python autocompletion engine
 Plugin 'ycm-core/YouCompleteMe'
 
-"Fugitive plugin as Vim Github wrapper
+"Vim Github wrapper
 Plugin 'tpope/vim-fugitive'
 
 "To display git diff in the gutter
 Plugin 'airblade/vim-gitgutter'
 
-"To browse repo files in github with/without line reference
+"To browse repo files in Github with/without line reference
 Plugin 'tpope/vim-rhubarb'
 
-"To comment stuff out
+"To comment with one command regardless of filetypes
 Plugin 'tpope/vim-commentary'
 
-"Airline plugin for colorful status bar
+"Functional status bar with theme choices
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
-"Syntax checker: Asynchronous Lint Engine
+"Asynchronous lint engine
 Plugin 'dense-analysis/ale'
 
-"Undo to multiple world lines
+"To undo along multiple world lines
 Plugin 'mbbill/undotree'
 
 "Doxygen comment generator
@@ -46,19 +47,18 @@ Plugin 'vim-scripts/DoxygenToolkit.vim'
 "Fuzzy finder
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
+
+"Color schemes
+Plugin 'morhetz/gruvbox'
+Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'nanotech/jellybeans.vim'
+Plugin 'gosukiwi/vim-atom-dark'
+
+"#
 
 
-filetype plugin indent on    " set filetype back on
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+"=====Vundle requirements RHS
+call vundle#end() "Close call
+
+filetype plugin indent on "Set filetype back on, to ignore plugin indent changes use 'filetype plugin on' instead
+"#
