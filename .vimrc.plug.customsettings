@@ -1,57 +1,45 @@
+"#####Author: Crasun Jans#####"
 "Custom Settings for VIM Plugins Specified in ~/.vim/.vimrc.plug
 
-"=====YouCompleteMe
-let g:ycm_max_num_candidates = 5
-let g:ycm_warning_symbol = '>'
-let g:ycm_confirm_extra_conf = 0
-let g:ycm_add_preview_to_completeopt = 1
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_max_diagnostics_to_display = 0  " Reference: https://github.com/ycm-core/YouCompleteMe/issues/2392
 
-" YCM Error & Warning Color Scheme
-" https://jonasjacek.github.io/colors/
+"=====YouCompleteMe
+
+"Symbols
+let g:ycm_error_symbol = '✗'
+let g:ycm_warning_symbol = '❗'
 hi YcmErrorSection ctermbg=0 cterm=underline
 hi YcmWarningSection ctermbg=0 cterm=underline
 
-" YCM Shortcut
-" Go to definition and open it in a new tab
+"Go to definition and open it in a new tab
 map gd :tab YcmCompleter GoTo <CR>
+
 "Toggle function info with \i
 nmap <silent> <leader>i <plug>(YCMHover)
 let g:ycm_auto_hover = ""
-let g:ycm_error_symbol = '✗'
-"" turn on completion in comments
-"Another way to map is:
-"comm! gt :YcmCompleter GoTo<CR>
 
-"let g:ycm_complete_in_comments=1
-"" load ycm conf by default
-"let g:ycm_confirm_extra_conf=0
-"" turn on tag completion
-"let g:ycm_collect_identifiers_from_tags_files=1
-"" only show completion as a list instead of a sub-window
-"set completeopt-=preview
-"" start completion from the first character
-"let g:ycm_min_num_of_chars_for_completion=1
-"" don't cache completion items
-"let g:ycm_cache_omnifunc=0
-"" complete syntax keywords
-"let g:ycm_seed_identifiers_with_syntax=1
+"Other settings
+let g:ycm_confirm_extra_conf = 0 "Load ycm conf file by default
+let g:ycm_max_num_candidates = 5
+let g:ycm_add_preview_to_completeopt = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_max_diagnostics_to_display = 0
+let g:ycm_seed_identifiers_with_syntax=1 "Complete syntax keywords
+"#
+
 
 "=====Asynchronous Lint Engine
-"Error and warning signs
+
+"Symbols
 let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '❗'
-" let g:airline#extensions#ale#enabled = 1
 
-"To run only specified linters and fixers
-let g:ale_linters_explicit = 1
+"Linters and fixers
+let g:ale_linters_explicit = 1 "To run only specified linters and fixers
 
 "Linters
 let g:ale_linters = {'python': ['flake8'],
 			 \'cpp': ['cppcheck'],
 			\'xml': ['xmllint']}
-
 
 "Fixers
 let g:ale_fixers = {'*': ['remove_trailing_lines','trim_whitespace'],
@@ -61,49 +49,42 @@ let g:ale_fixers = {'*': ['remove_trailing_lines','trim_whitespace'],
 "Fix on save
 let g:ale_fix_on_save = 1
 
-"=====Vim airline settings
+"Other settings
+let g:ale_sign_highlight_linenrs=1
+"#
+
+
+"=====Airline
+
+"Nice themes
 let g:airline_theme= 'distinguished'
 let g:airline_solarized_bg='dark'
-""Path and namestyle for the buffers
-""let g:airline#extensions#tabline#formatter = 'default'  " f/p/file-name.js
-""let g:airline#extensions#tabline#formatter = 'jsformatter' " path-to/f
-"let g:airline#extensions#tabline#formatter = 'unique_tail' " file-name.js
-""let g:airline#extensions#tabline#formatter = 'unique_tail_improved' " f/p/file-name.js
-"
-"" Note: You must define the dictionary first before setting values.
-"" Also, it's a good idea to check whether it exists as to avoid
-"" accidentally overwriting its contents.
-"
-"if !exists('g:airline_symbols')
-"  let g:airline_symbols = {}
-"endif
+" let g:airline_theme='gruvbox'
+" let g:airline_theme= 'papercolor'
+" let g:airline_theme= 'jellybeans'
+" let g:airline_theme= 'papercolor'
 
-" powerline symbols
-"let g:airline_left_sep = ''
-"let g:airline_left_alt_sep = ''
-"let g:airline_right_sep = ''
-"let g:airline_right_alt_sep = ''
-"let g:airline_symbols.branch = ''
-"let g:airline_symbols.readonly = ''
-"let g:airline_symbols.linenr = '☰'
-"let g:airline_symbols.maxlinenr = ''
-"let g:airline_symbols.dirty='⚡'
-
-"" If you only see boxes here it may be because your system doesn't have
-"" the correct fonts. Try it in vim first and if that fails see the help
-"" pages for vim-airline :help airline-troubleshooting
-"
-"let g:airline#extensions#tabline#enabled = 1
+"Customizing sections
 let g:airline_section_x=''
 let g:airline_section_y=''
-""let g:airline_section_z=''
+"let g:airline_section_z=''
 let g:airline_section_warning=''
-""let g:airline_section_a = airline#section#create(['📂','mode'])
-call airline#parts#define_accent('linenr', 'none')
-let g:airline_section_z = airline#section#create(['%3p%%: ', 'linenr', '/%L', ' co:%v'])
+call airline#parts#define_accent('linenr', 'none') "Needed to unbold line number
+let g:airline_section_z = airline#section#create(['%3p%%: ', 'linenr', '/%L', ' co:%v']) "Add line number/total lines and column number
 
-"====Undotree
+"Other settings
+let g:airline#extensions#ale#enabled = 1 "Enable ALE signs
+" let g:airline#extensions#tabline#enabled = 1 "Enable tab line
+" let g:airline#extensions#tabline#formatter = 'unique_tail' "Path and namestyle for the buffers and tabs: file-name.js
+"#
+
+
+"=====Undotree
+"Toggle Undotree with \u
 map <Leader>u :UndotreeToggle <CR>
+"#
 
-"To disable default gitgutter mappings
-let g:gitgutter_map_keys = 0
+
+"=====Git-gutter
+let g:gitgutter_map_keys = 0 "Disable default gitgutter mappings
+"#
