@@ -48,6 +48,9 @@ Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
 
+"To show marks in the gutter
+Plugin 'kshenoy/vim-signature'
+
 "Color schemes
 Plugin 'morhetz/gruvbox'
 Plugin 'NLKNguyen/papercolor-theme'
