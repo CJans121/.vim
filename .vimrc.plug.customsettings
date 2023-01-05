@@ -46,6 +46,9 @@ let g:ale_fixers = {'*': ['remove_trailing_lines','trim_whitespace'],
 			\'python':['black','isort'],
 			\'cpp':['clang-format']}
 
+"Clang-format style configuration
+let g:ale_c_clangformat_options = '-style="{BasedOnStyle: Microsoft, ConstructorInitializerAllOnOneLineOrOnePerLine: true, AllowShortFunctionsOnASingleLine: All}"'
+
 "Fix on save
 let g:ale_fix_on_save = 1
 
@@ -87,4 +90,13 @@ map <Leader>u :UndotreeToggle <CR>
 
 "=====Git-gutter
 let g:gitgutter_map_keys = 0 "Disable default gitgutter mappings
+"#
+
+
+"=====Signature
+"Remap so \m toggles marks in the gutter
+nnoremap <silent> <Leader>m :SignatureToggle<CR>
+
+"Make Signature compatible with Gitgutter by having marks inherit color from gutter mode, i.e. add, modify, delete
+let g:SignatureMarkTextHLDynamic = 1
 "#
