@@ -142,3 +142,9 @@ set shortmess-=S "Show search statistics
 "=====Increase update time for quicker updates overall, for instance in ALE/YCM warning suggestions, and git-gutter
 set updatetime=250
 "#
+
+
+"=====Mouse support
+"Disable in all modes
+set mouse=
+"#
