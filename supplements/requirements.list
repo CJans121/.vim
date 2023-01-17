@@ -3,6 +3,6 @@ flake8
 isort
 cppcheck
 clang-format
-xmllint
+libxml2-utils
 doxygen
 fzf

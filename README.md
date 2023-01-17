@@ -4,7 +4,7 @@ Python linters: *black*, *flake8*<br />
 Python fixer: *isort* <br />
 Cpp linter: *cppcheck* <br />
 Cpp fixer: *clang-format* <br />
-Xml linter: *xmllint* <br />
+Xml linter: *xmllint* as part of *libxml2-utils* <br />
 Code documentation tool: *doxygen* <br />
 Fuzzy file searcher: *fzf* <br />
 <sub>All of these can be installed with *sudo apt-get install &lt;program_name&gt;* </sub>
