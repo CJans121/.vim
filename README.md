@@ -58,7 +58,7 @@ colcon build --cmake-args \
 Finally, move to ROS workspaces the python script that tells YCM where to look for the `compile_commands.json` file: <br />
 
 ```
-mv ~/.vim/.ycm_extra_conf.py ~/<ROS_ws>
+mv ~/.vim/supplements/.ycm_extra_conf.py ~/<ROS_ws>
 ```
 You are all set <br />
 
