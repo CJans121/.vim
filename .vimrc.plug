@@ -57,6 +57,9 @@ Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'gosukiwi/vim-atom-dark'
 
+"To preview markdown files
+Plugin 'iamcco/markdown-preview.nvim'
+
 "#
 
 

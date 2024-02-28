@@ -28,7 +28,8 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
  ln -s ~/.vim/.vimrc ~/
 ```
-5) Open VIM and type the following command to install the vim plugins `:PluginInstall` <br />
+5) Open VIM and type the following command to install the vim plugins `:PluginInstall | call mkdp#util#install()` <br />
+<small>Note: the mkdp call is to setup the Markdown Preview plugin</small>
 
 ## Optional
 1) If you want C++ and python autocompletion for ROS and ROS2, compile YCM by: <br />
