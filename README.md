@@ -11,6 +11,10 @@ Fuzzy file searcher: *fzf* <br />
 
 ## Instructions
 1) Git clone this repository into the base directory, usually `~/`<br />
+
+```
+cd ~/ && git clone git@github.com:CJans121/.vim.git
+```
 2) If you haven't installed the above requirements yet, install all of them at once with: <br />
 
 ```
@@ -28,8 +32,16 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
  ln -s ~/.vim/.vimrc ~/
 ```
-5) Open VIM and type the following command to install the vim plugins `:PluginInstall | call mkdp#util#install()` <br />
-<small>Note: the mkdp call is to setup the Markdown Preview plugin</small>
+5) Open VIM and enter the following command to install the vim plugins
+
+```
+:PluginInstall
+```
+6) To setup the Markdown Preview plugin, execute the following command as well
+
+```
+:call mkdp#util#install()
+```
 
 ## Optional
 1) If you want C++ and python autocompletion for ROS and ROS2, compile YCM by: <br />
