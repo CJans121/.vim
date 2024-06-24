@@ -68,10 +68,10 @@ For ROS2, navigate to colcon workspace, execute the following command, and `colc
 colcon build --cmake-args \
   -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
 ```
-Finally, move to ROS workspaces the python script that tells YCM where to look for the `compile_commands.json` file: <br />
+Finally, copy to ROS workspaces the python script that tells YCM where to look for the `compile_commands.json` file: <br />
 
 ```
-mv ~/.vim/supplements/.ycm_extra_conf.py ~/<ROS_ws>
+cp ~/.vim/supplements/.ycm_extra_conf.py ~/<ROS_ws>
 ```
 You are all set <br />
 
